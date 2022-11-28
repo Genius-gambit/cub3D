@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: hawadh <hawadh@student.42Abudhabi.ae>      +#+  +:+       +#+         #
+#    By: makhtar <makhtar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/21 16:36:51 by hawadh            #+#    #+#              #
-#    Updated: 2022/11/28 15:43:39 by hawadh           ###   ########.fr        #
+#    Updated: 2022/11/28 15:57:50 by makhtar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,8 +72,7 @@ ${NAME}:	${OBJS}
 			cp ${GNLDIR}/${GNL} ./
 			cp ${MLXDIR}/${MLX} ./
 			${CC} ${CFLAGS} ${OBJS} ${LIBFT} ${GNL} ${MLXFLG} -o ${NAME}
-
-all:	${NAME}
+	@echo ""
 	@echo "${BLACK}  ${RED}WKkK${BLACK}                                                                                         ${RED}xX${BLACK}   "
 	@echo "${RED}XK0xxX${BLACK}                                                                                         ${RED}xk0KN"
 	@echo "${RED}xloxK${BLACK}                                                                                         ${RED}N0dllk"
@@ -113,6 +112,8 @@ all:	${NAME}
 	@echo "                               ╚═════╝ ╚═════╝ ╚═════╝ ╚═════╝ ╚═════╝ "
 	@echo "                                                                       ${WHITE}"
 	@cat authors
+
+all:	${NAME}
 
 vg:		all
 		valgrind -s --leak-check=full --show-leak-kinds=all --track-origins=yes ./cub3d tester.cub
