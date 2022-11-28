@@ -3,4 +3,8 @@
 .vscode/*
 .vscode
 .DS_Store
+.dist
+readme.md
 *.txt
+/*.txt
+Raycasting Algorithm/
